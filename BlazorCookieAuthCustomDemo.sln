@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCookieAuthCustomDemo", "BlazorCookieAuthCustomDemo\BlazorCookieAuthCustomDemo\BlazorCookieAuthCustomDemo.csproj", "{CB7E9384-6F35-49AB-8B5B-FFDE219E70FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCookieAuthCustomDemo.Client", "BlazorCookieAuthCustomDemo\BlazorCookieAuthCustomDemo.Client\BlazorCookieAuthCustomDemo.Client.csproj", "{8DF95BE6-57EF-4DFC-9B62-96C6857CFE76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB7E9384-6F35-49AB-8B5B-FFDE219E70FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB7E9384-6F35-49AB-8B5B-FFDE219E70FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB7E9384-6F35-49AB-8B5B-FFDE219E70FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB7E9384-6F35-49AB-8B5B-FFDE219E70FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF95BE6-57EF-4DFC-9B62-96C6857CFE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF95BE6-57EF-4DFC-9B62-96C6857CFE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF95BE6-57EF-4DFC-9B62-96C6857CFE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF95BE6-57EF-4DFC-9B62-96C6857CFE76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98F6CB1D-A8AE-4311-B235-932580D20BF5}
+	EndGlobalSection
+EndGlobal
