@@ -38,12 +38,12 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
-builder.Services.AddScoped<AuthenticationCookieMaximumAgeTimeout>();
+builder.Services.AddTransient<AuthenticationCookieMaximumAgeTimeout>();
 
 builder.Services.Configure<CookieAuthenticationOptions>(IdentityConstants.ApplicationScheme, options =>
 {
     options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-    options.Cookie.MaxAge = options.ExpireTimeSpan;
+    options.Cookie.MaxAge = options.ExpireTimeSpan; // set this cookie to have a fixed timeout rather than being a session cookie
     options.SlidingExpiration = true;
     options.EventsType = typeof(AuthenticationCookieMaximumAgeTimeout);
 });

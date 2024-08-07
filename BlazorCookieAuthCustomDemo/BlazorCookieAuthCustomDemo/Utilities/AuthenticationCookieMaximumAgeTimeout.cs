@@ -6,7 +6,7 @@ namespace BlazorCookieAuthCustomDemo.Utilities
     {
         public override Task SigningIn(CookieSigningInContext context)
         {
-            // add an "ExpiresInTicks" string value to the authentication cookie, this is the current date time in ticks plus one day
+            // add an "ExpiresInTicks" string value to the authentication cookie, this is the current date/time in ticks plus one day
             context.Properties.SetString("ExpiresInTicks", (DateTime.UtcNow.Ticks + TimeSpan.FromHours(8).Ticks).ToString());
             return base.SigningIn(context);
         }
@@ -41,6 +41,13 @@ namespace BlazorCookieAuthCustomDemo.Utilities
 
             // otherwise, continue validation of the authentication cookie
             await base.ValidatePrincipal(context);
+        }
+
+        public override Task CheckSlidingExpiration(CookieSlidingExpirationContext context)
+        {
+            // rather than extending the cookie's expiration after it's more than halfway through the expiration window, renew the cookie after 5 minutes
+            context.ShouldRenew = context.ElapsedTime > TimeSpan.FromMinutes(5);
+            return base.CheckSlidingExpiration(context);
         }
     }
 }
